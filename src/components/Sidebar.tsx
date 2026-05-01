@@ -5,6 +5,7 @@ import {
   Activity,
   FileText,
   Lightbulb,
+  Settings,
   X,
   Heart
 } from 'lucide-react'
@@ -20,6 +21,7 @@ const navItems = [
   { path: '/tracker', icon: Activity, label: 'Health Tracker' },
   { path: '/reports', icon: FileText, label: 'Reports' },
   { path: '/insights', icon: Lightbulb, label: 'Insights' },
+  { path: '/settings', icon: Settings, label: 'Settings' },
 ]
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {

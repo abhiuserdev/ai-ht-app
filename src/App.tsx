@@ -5,6 +5,7 @@ import AIAssistant from './pages/AIAssistant'
 import HealthTracker from './pages/HealthTracker'
 import ReportAnalyzer from './pages/ReportAnalyzer'
 import Insights from './pages/Insights'
+import Settings from './pages/Settings'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/tracker" element={<HealthTracker />} />
         <Route path="/reports" element={<ReportAnalyzer />} />
         <Route path="/insights" element={<Insights />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
     </Layout>
   )
