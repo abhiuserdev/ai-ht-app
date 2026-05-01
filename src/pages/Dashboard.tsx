@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useAuth } from '../context/AuthContext'
 import {
   Heart,
   Activity,
@@ -81,6 +82,7 @@ function HealthTip({ title, description, type }: HealthTipProps) {
 }
 
 export default function Dashboard() {
+  const { user } = useAuth()
   const [greeting, setGreeting] = useState('')
 
   useEffect(() => {
@@ -93,7 +95,7 @@ export default function Dashboard() {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">{greeting}, Alex</h1>
+        <h1 className="text-2xl font-bold text-gray-900">{greeting}, {user?.name?.split(' ')[0] || 'User'}</h1>
         <p className="text-gray-500 mt-1">Here's your health overview for today</p>
       </div>
 
